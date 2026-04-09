@@ -92,8 +92,14 @@ tk.Label(janela, text="Senha").pack()
 entry_senha = tk.Entry(janela)
 entry_senha.pack()
 
+tk.Label(janela, text="ID para remover").pack()
+entry_id = tk.Entry(janela)
+entry_id.pack()
+
 tk.Button(janela, text="Gerar senha", command=gerar_senha).pack()
 tk.Button(janela, text="Salvar", command=salvar).pack()
 tk.Button(janela, text="Listar senhas", command=listar).pack()
+
+
 
 janela.mainloop()
