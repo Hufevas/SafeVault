@@ -63,17 +63,17 @@ def listar():
 
     messagebox.showinfo("Senhas", texto if texto else "Nenhuma senha")
 
-    def remover():
+def remover():
     id_remover = entry_id.get()
 
     if not id_remover:
         messagebox.showerror("Erro", "Digite um ID válido")
         return
 
-    cursor.execute("DELETE FROM credenciais WHERE id = ?", (id_remover,))
+    cursor.execute("DELETE FROM credenciais WHERE id = ?", (int(id_remover),))
     conn.commit()
 
-    messagebox.showinfo("Sucesso", "Senha removida com sucesso!")
+    messagebox.showinfo("Sucesso", "Senha removida!")
 
 # ===== INTERFACE =====
 
