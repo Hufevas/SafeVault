@@ -99,7 +99,6 @@ entry_id.pack()
 tk.Button(janela, text="Gerar senha", command=gerar_senha).pack()
 tk.Button(janela, text="Salvar", command=salvar).pack()
 tk.Button(janela, text="Listar senhas", command=listar).pack()
-
-
+tk.Button(janela, text="Remover senha", command=remover).pack()
 
 janela.mainloop()
