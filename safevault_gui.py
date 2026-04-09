@@ -54,12 +54,12 @@ def salvar():
     messagebox.showinfo("Sucesso", "Senha salva!")
 
 def listar():
-    cursor.execute("SELECT site, usuario, senha FROM credenciais")
+    cursor.execute("SELECT id, site, usuario, senha FROM credenciais")
     dados = cursor.fetchall()
 
     texto = ""
-    for site, user, senha in dados:
-        texto += f"{site} | {user} | {cipher.decrypt(senha).decode()}\n"
+    for id_, site, user, senha in dados:
+        texto += f"[{id_}] {site} | {user} | {cipher.decrypt(senha).decode()}\n"
 
     messagebox.showinfo("Senhas", texto if texto else "Nenhuma senha")
 
